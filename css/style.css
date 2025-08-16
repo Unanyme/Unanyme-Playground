@@ -183,26 +183,27 @@ footer p {
   margin: 0;
 }
 
-/* MENU-BAR - BARRA PRETA E BOTÃO */
+/* MENU-BAR - usado apenas no mobile */
 #menu-bar {
   background-color: black;
   width: 100%;
-  height: 50px; /* altura fixa para a barra */
-  display: flex;
-  justify-content: center; /* centraliza horizontal */
-  align-items: center; /* centraliza vertical */
+  height: 50px;
+  justify-content: center;
+  align-items: center;
   position: relative;
   z-index: 10;
+
+  /* Esconde por padrão */
+  display: none;
 }
 
 #menu-toggle {
-  display: none; /* escondido por padrão */
+  display: none;
   font-size: 2rem;
   background: none;
   border: none;
   color: white;
   cursor: pointer;
-  /* removido position absolute para ficar dentro do fluxo */
 }
 
 /* ================= MEDIA QUERIES ================= */
@@ -221,36 +222,32 @@ footer p {
     align-items: center;
   }
 
-  /* Barra preta horizontal com botão centralizado */
   #menu-bar {
-    width: 100%;
+    display: flex; /* Mostra apenas no mobile */
     background-color: #111;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 10px 0;
-    height: 50px; /* manter altura fixa */
+    height: 50px;
   }
 
   #menu-toggle {
-    display: block; /* mostra o botão no mobile */
+    display: block;
     font-size: 30px;
     color: white;
     background: none;
     border: none;
     cursor: pointer;
-    position: static; /* para garantir que fique dentro do fluxo */
+    position: static;
   }
 
   nav {
     width: 100%;
     background-color: #111;
     text-align: center;
-    display: none; /* Esconde o menu por padrão */
+    display: none;
   }
 
   nav.active {
-    display: block; /* Mostra quando estiver ativo */
+    display: block;
   }
 
   nav ul {
@@ -299,6 +296,10 @@ footer p {
     display: none;
   }
 
+  #menu-bar {
+    display: none; /* Esconde no tablet também */
+  }
+
   main {
     width: 90%;
   }
@@ -317,6 +318,10 @@ footer p {
 @media (min-width: 1025px) {
   #menu-toggle {
     display: none;
+  }
+
+  #menu-bar {
+    display: none; /* Esconde no desktop */
   }
 
   main {
