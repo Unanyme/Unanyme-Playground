@@ -1,0 +1,343 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: #42134F; /* fundo roxo escuro */
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  min-height: 100vh;
+}
+
+body {
+  display: block;
+}
+
+/* HEADER e BANNER */
+header {
+  margin: 0 !important;
+  padding: 0 !important;
+  position: relative;
+  background: #222;
+  color: #fff;
+  box-shadow: 0 2px 10px 6px rgba(0, 0, 0, 0.61);
+  width: 100vw;
+  display: block;
+  overflow-x: hidden;
+}
+
+img#banner {
+  width: 100vw;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* NAVEGAÇÃO */
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 10px 0;
+  margin: 0 auto;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+nav a:hover {
+  background-color: white;
+  color: black;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* MAIN CONTEÚDO */
+main {
+  background-color: rgba(255, 255, 255, 0.925);
+  width: 80%;
+  margin: 20px auto 0;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.466);
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+/* POSTS E PROJETOS */
+.projeto, .post {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 0px 15px 0 15px;
+  border-radius: 10px;
+}
+
+p {
+  line-height: 1.7em;
+  font-size: 1.2em;
+  text-indent: 10px;
+  padding: 0 10px;
+  text-align: justify;
+  border-radius: 10px;
+}
+
+main p {
+  background-color: white;
+}
+
+/* TÍTULOS */
+h1, h2, h3 {
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.781);
+  padding: 10px;
+  text-align: center;
+  background-image: linear-gradient(to right, #761288, #670d77d8, #ad22c5b6, #d741f1c7, #e995f8b6);
+  color: white;
+  margin-bottom: 15px;
+}
+
+h1 {
+  border-radius: 10px 10px 0 0;
+}
+
+h3 {
+  text-align: left;
+  text-indent: 20px;
+  padding: 0px;
+  margin: 0px -16px 0px -16px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+/* CONTAINER FLEX */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px 0;
+  flex-wrap: wrap;
+}
+
+.container .texto {
+  flex: 1;
+}
+
+.container .imagem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagem img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid black;
+  box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.548);
+  border-radius: 10px;
+}
+
+/* RODAPÉ */
+footer {
+  width: 100vw;
+  margin-top: 20px;
+  background-color: #751E85;
+  color: white;
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;
+  box-shadow: 1px 2px 1px 5px rgba(0, 0, 0, 0.137);
+  padding: 10px;
+}
+
+footer p {
+  text-indent: 0;
+  padding: 0;
+  text-align: center;
+  margin: 0;
+}
+
+/* MENU-BAR - BARRA PRETA E BOTÃO */
+#menu-bar {
+  background-color: black;
+  width: 100%;
+  height: 50px; /* altura fixa para a barra */
+  display: flex;
+  justify-content: center; /* centraliza horizontal */
+  align-items: center; /* centraliza vertical */
+  position: relative;
+  z-index: 10;
+}
+
+#menu-toggle {
+  display: none; /* escondido por padrão */
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  /* removido position absolute para ficar dentro do fluxo */
+}
+
+/* ================= MEDIA QUERIES ================= */
+
+/* MOBILE - até 600px */
+@media (max-width: 600px) {
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Barra preta horizontal com botão centralizado */
+  #menu-bar {
+    width: 100%;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    height: 50px; /* manter altura fixa */
+  }
+
+  #menu-toggle {
+    display: block; /* mostra o botão no mobile */
+    font-size: 30px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: static; /* para garantir que fique dentro do fluxo */
+  }
+
+  nav {
+    width: 100%;
+    background-color: #111;
+    text-align: center;
+    display: none; /* Esconde o menu por padrão */
+  }
+
+  nav.active {
+    display: block; /* Mostra quando estiver ativo */
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  nav ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .texto {
+    order: 2;
+  }
+
+  .imagem {
+    order: 1;
+  }
+
+  .imagem img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  main {
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+  }
+}
+
+/* TABLET - de 601px até 1024px */
+@media (min-width: 601px) and (max-width: 1024px) {
+  #menu-toggle {
+    display: none;
+  }
+
+  main {
+    width: 90%;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imagem img {
+    max-width: 80%;
+  }
+}
+
+/* DESKTOP - acima de 1025px */
+@media (min-width: 1025px) {
+  #menu-toggle {
+    display: none;
+  }
+
+  main {
+    width: 80%;
+  }
+
+  .container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .container .texto {
+    flex: 1.2;
+  }
+
+  .container .imagem {
+    flex: 0.8;
+  }
+
+  .imagem img {
+    max-width: 100%;
+    height: auto;
+  }
+}
