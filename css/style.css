@@ -99,6 +99,15 @@ section {
   border-radius: 10px;
 }
 
+ul.quem-sou {
+    list-style-position: inside;
+    font-size: 1.1em;
+    text-indent: 2em; 
+    line-height: 2em;
+    font-weight: bold;
+  }
+
+
 p {
   line-height: 1.7em;
   font-size: 1.2em;
@@ -256,6 +265,7 @@ footer p {
     margin: 0;
     list-style: none;
   }
+
 
   nav ul li {
     padding: 10px 0;
