@@ -9,7 +9,10 @@
 </head>
 <body>
   <header>
-  <img src="assets/banner2.png" alt="banner" style="width: 100%; height: auto;" />
+   <picture>
+    <source media="(max-width: 600px)" srcset="assets/banner-pq.png">
+    <img src="assets/banner2.png" alt="banner" style="width: 100%; height: auto;" />
+  </picture>
 
   <div id="menu-bar">
     <button id="menu-toggle" onclick="toggleMenu()">☰</button>
